@@ -5,13 +5,13 @@
  */
 package com.cibt.crm.web.repository;
 
-import com.cibt.crm.web.entity.Customer_Conversation;
+import com.cibt.crm.web.entity.CustomerConversation;
 
 /**
  *
  * @author dale
  */
-public interface CustomerConversationRepository extends CrudRepository<Customer_Conversation> {
+public interface CustomerConversationRepository extends CrudRepository<CustomerConversation> {
     
 }
 

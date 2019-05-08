@@ -5,7 +5,7 @@
  */
 package com.cibt.crm.web.repository.impl;
 
-import com.cibt.crm.web.entity.Customer_Conversation;
+import com.cibt.crm.web.entity.CustomerConversation;
 import com.cibt.crm.web.repository.CustomerConversationRepository;
 import java.util.List;
 
@@ -16,17 +16,17 @@ import java.util.List;
 public class CustomerConversationRepositoryImpl implements CustomerConversationRepository {
 
     @Override
-    public void insert(Customer_Conversation model) throws Exception {
+    public void insert(CustomerConversation model) throws Exception {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void update(Customer_Conversation model) throws Exception {
+    public void update(CustomerConversation model) throws Exception {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public Customer_Conversation getById(int id) throws Exception {
+    public CustomerConversation getById(int id) throws Exception {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -36,7 +36,7 @@ public class CustomerConversationRepositoryImpl implements CustomerConversationR
     }
 
     @Override
-    public List<Customer_Conversation> getAll() throws Exception {
+    public List<CustomerConversation> getAll() throws Exception {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     

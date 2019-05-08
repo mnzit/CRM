@@ -5,7 +5,7 @@
  */
 package com.cibt.crm.web.service.impl;
 
-import com.cibt.crm.web.entity.Customer_Conversation;
+import com.cibt.crm.web.entity.CustomerConversation;
 import com.cibt.crm.web.service.CustomerConversationService;
 import java.util.List;
 
@@ -16,7 +16,7 @@ import java.util.List;
 public class CustomerConversationServiceImpl implements CustomerConversationService {
 
     @Override
-    public void save(Customer_Conversation model) throws Exception {
+    public void save(CustomerConversation model) throws Exception {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -26,12 +26,12 @@ public class CustomerConversationServiceImpl implements CustomerConversationServ
     }
 
     @Override
-    public Customer_Conversation fetchById(int id) throws Exception {
+    public CustomerConversation fetchById(int id) throws Exception {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public List<Customer_Conversation> fetchAll() throws Exception {
+    public List<CustomerConversation> fetchAll() throws Exception {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     

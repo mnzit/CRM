@@ -11,15 +11,15 @@ import java.util.Date;
  *
  * @author dale
  */
-public class Customer_Conversation {
+public class CustomerConversation {
      private Date createdDate,modifiedDate;
      private int conversation_id,conversation_type,customer_id;
      private String message;
 
-    public Customer_Conversation() {
+    public CustomerConversation() {
     }
     
-    public Customer_Conversation(int customer_id) {
+    public CustomerConversation(int customer_id) {
     }
 
     public Date getCreatedDate() {
