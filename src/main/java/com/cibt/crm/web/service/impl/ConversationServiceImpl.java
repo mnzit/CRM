@@ -6,6 +6,7 @@
 package com.cibt.crm.web.service.impl;
 
 import com.cibt.crm.web.entity.Conversation;
+import com.cibt.crm.web.repository.ConversationRepository;
 import com.cibt.crm.web.service.ConversationService;
 import java.util.List;
 
@@ -15,9 +16,15 @@ import java.util.List;
  */
 public class ConversationServiceImpl implements ConversationService {
 
+    private ConversationRepository conversationRepository; 
+
+    public ConversationServiceImpl(ConversationRepository conversationRepository) {
+        this.conversationRepository = conversationRepository;
+    }
+    
     @Override
     public void save(Conversation model) throws Exception {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        conversationRepository.insert(model);
     }
 
     @Override
@@ -27,12 +34,12 @@ public class ConversationServiceImpl implements ConversationService {
 
     @Override
     public Conversation fetchById(int id) throws Exception {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return conversationRepository.getById(id);
     }
 
     @Override
     public List<Conversation> fetchAll() throws Exception {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return conversationRepository.getAll();
     }
     
 }
