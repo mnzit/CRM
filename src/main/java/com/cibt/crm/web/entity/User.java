@@ -11,33 +11,25 @@ import java.util.Date;
  *
  * @author Mnzit
  */
-public class Customer {
+public class User {
 
     private int id;
     private String name;
-    private String contactNo;
     private String email;
+    private String contactNo;
     private Date dateCreated;
     private Date dateModified;
-    private boolean isDeleted;
-    private Date deletedDate;
-    private User user;
     private boolean status;
 
-    public Customer() {
+    public User() {
     }
 
-    public Customer(int id, String name, String contactNo, String email, User user, boolean status) {
+    public User(int id, String name, String email, String contactNo, boolean status) {
         this.id = id;
         this.name = name;
-        this.contactNo = contactNo;
         this.email = email;
-        this.user = user;
+        this.contactNo = contactNo;
         this.status = status;
-    }
-
-    public Customer(int id) {
-        this.id = id;
     }
 
     public int getId() {
@@ -56,20 +48,20 @@ public class Customer {
         this.name = name;
     }
 
-    public String getContactNo() {
-        return contactNo;
-    }
-
-    public void setContactNo(String contactNo) {
-        this.contactNo = contactNo;
-    }
-
     public String getEmail() {
         return email;
     }
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getContactNo() {
+        return contactNo;
+    }
+
+    public void setContactNo(String contactNo) {
+        this.contactNo = contactNo;
     }
 
     public Date getDateCreated() {
@@ -86,30 +78,6 @@ public class Customer {
 
     public void setDateModified(Date dateModified) {
         this.dateModified = dateModified;
-    }
-
-    public boolean isIsDeleted() {
-        return isDeleted;
-    }
-
-    public void setIsDeleted(boolean isDeleted) {
-        this.isDeleted = isDeleted;
-    }
-
-    public Date getDeletedDate() {
-        return deletedDate;
-    }
-
-    public void setDeletedDate(Date deletedDate) {
-        this.deletedDate = deletedDate;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
     }
 
     public boolean isStatus() {

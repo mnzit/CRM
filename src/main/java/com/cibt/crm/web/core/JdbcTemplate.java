@@ -16,7 +16,7 @@ import java.util.List;
  *
  * @author Mnzit
  */
-public class JdbcTempate<T> {
+public class JdbcTemplate<T> {
 
     public Connection getConnection() throws Exception {
         return DriverManager.getConnection(DbConstants.URL, DbConstants.USERNAME, DbConstants.PASSWORD);
@@ -37,8 +37,10 @@ public class JdbcTempate<T> {
 
     public List<T> query(String sql, Object[] args, RowMapper<T> mapper) throws Exception {
         PreparedStatement pstm = getConnection().prepareStatement(sql);
-        addParameters(pstm, args);
-        List<T> coll = new ArrayList<T>();
+        if (args != null) {
+            addParameters(pstm, args);
+        }
+        List<T> coll = new ArrayList<>();
         ResultSet rs = pstm.executeQuery();
         while (rs.next()) {
             coll.add(mapper.mapRow(rs));

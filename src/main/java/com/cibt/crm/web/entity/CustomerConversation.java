@@ -14,6 +14,7 @@ import java.util.Date;
 public class CustomerConversation {
      private Date createdDate,modifiedDate;
      private int conversation_id,conversation_type,customer_id;
+     
      private String message;
 
     public CustomerConversation() {
