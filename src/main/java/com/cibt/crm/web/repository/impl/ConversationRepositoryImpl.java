@@ -5,7 +5,9 @@
  */
 package com.cibt.crm.web.repository.impl;
 
+import com.cibt.crm.web.core.JdbcTemplate;
 import com.cibt.crm.web.entity.Conversation;
+import com.cibt.crm.web.entity.User;
 import com.cibt.crm.web.repository.ConversationRepository;
 import java.util.List;
 
@@ -15,9 +17,21 @@ import java.util.List;
  */
 public class ConversationRepositoryImpl implements ConversationRepository {
 
+//    @Override
+//    public void insert(Conversation model) throws Exception {
+//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//    }
+    
+    private JdbcTemplate<Conversation> template = new JdbcTemplate<>();
+
     @Override
     public void insert(Conversation model) throws Exception {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        String sql = "insert into tbl_conversations (email,password,status) values(?,?,?)";
+
+        template.update(sql, new Object[]{
+            model.getEmail(), model.getPassword(), model.isStatus()
+        });
+
     }
 
     @Override
