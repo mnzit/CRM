@@ -3,12 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.cibt.crm.web.repository.impl;
+package com.cibt.crm.web.service;
+
+import com.cibt.crm.web.entity.Customer_Conversation;
 
 /**
  *
  * @author dale
  */
-public class Customer_ConversationRepositoryImpl{
+public interface CustomerConversationService extends GenericService<Customer_Conversation>{
     
 }

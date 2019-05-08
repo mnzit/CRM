@@ -11,7 +11,7 @@ import com.cibt.crm.web.entity.Customer_Conversation;
  *
  * @author dale
  */
-public interface Customer_ConversationRepository extends CrudRepository<Customer_Conversation> {
+public interface CustomerConversationRepository extends CrudRepository<Customer_Conversation> {
     
 }
 
