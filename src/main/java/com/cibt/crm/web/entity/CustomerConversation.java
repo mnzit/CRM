@@ -13,13 +13,10 @@ import java.util.Date;
  */
 public class CustomerConversation {
      private Date createdDate,modifiedDate;
-     private int conversation_id,conversation_type,customer_id;
-     private String message;
+     private int conversationType;
+     private CustomerConversation customerid;
 
     public CustomerConversation() {
-    }
-    
-    public CustomerConversation(int customer_id) {
     }
 
     public Date getCreatedDate() {
@@ -38,36 +35,20 @@ public class CustomerConversation {
         this.modifiedDate = modifiedDate;
     }
 
-    public int getConversation_id() {
-        return conversation_id;
+    public int getConversationType() {
+        return conversationType;
     }
 
-    public void setConversation_id(int conversation_id) {
-        this.conversation_id = conversation_id;
+    public void setConversationType(int conversationType) {
+        this.conversationType = conversationType;
     }
 
-    public int getConversation_type() {
-        return conversation_type;
+    public CustomerConversation getCustomerid() {
+        return customerid;
     }
 
-    public void setConversation_type(int conversation_type) {
-        this.conversation_type = conversation_type;
+    public void setCustomerid(CustomerConversation customerid) {
+        this.customerid = customerid;
     }
 
-    public int getCustomer_id() {
-        return customer_id;
-    }
-
-    public void setCustomer_id(int customer_id) {
-        this.customer_id = customer_id;
-    }
-
-    public String getMessage() {
-        return message;
-    }
-
-    public void setMessage(String message) {
-        this.message = message;
-    }
-    
 }
