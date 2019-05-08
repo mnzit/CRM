@@ -8,6 +8,9 @@ package com.cibt.crm.web.core;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -26,10 +29,32 @@ public class JdbcTempate<T> {
         }
     }
 
-    public int query(String sql, Object[] args) throws Exception {
+    public int update(String sql, Object[] args) throws Exception {
         PreparedStatement pstm = getConnection().prepareStatement(sql);
         addParameters(pstm, args);
         return pstm.executeUpdate();
     }
-    
+
+    public List<T> query(String sql, Object[] args, RowMapper<T> mapper) throws Exception {
+        PreparedStatement pstm = getConnection().prepareStatement(sql);
+        addParameters(pstm, args);
+        List<T> coll = new ArrayList<T>();
+        ResultSet rs = pstm.executeQuery();
+        while (rs.next()) {
+            coll.add(mapper.mapRow(rs));
+        }
+        return coll;
+    }
+
+    public T queryForObject(String sql, Object[] args, RowMapper<T> mapper) throws Exception {
+        PreparedStatement pstm = getConnection().prepareStatement(sql);
+        addParameters(pstm, args);
+        T model = null;
+        ResultSet rs = pstm.executeQuery();
+        while (rs.next()) {
+            model = mapper.mapRow(rs);
+        }
+        return model;
+    }
+
 }
