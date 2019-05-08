@@ -8,8 +8,6 @@ package com.cibt.crm.web.repository.impl;
 import com.cibt.crm.web.core.JdbcTemplate;
 import com.cibt.crm.web.core.RowMapper;
 import com.cibt.crm.web.entity.Conversation;
-import com.cibt.crm.web.entity.Customer;
-import com.cibt.crm.web.entity.User;
 import com.cibt.crm.web.repository.ConversationRepository;
 import java.sql.ResultSet;
 import java.util.Date;
