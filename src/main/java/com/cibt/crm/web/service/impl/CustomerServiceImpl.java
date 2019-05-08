@@ -34,7 +34,7 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public Customer fetchById(int id) throws Exception {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       return customerRepository.getById(id);
     }
 
     @Override
