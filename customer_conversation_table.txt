@@ -1,1 +1,4 @@
 create table tbl_customer_conversation (id serial primary key, created_date timestamp default CURRENT_TIMESTAMP, conversation_id int not null, message varchar(255) not null, conversation_type int not null, customer_id int not null);
+
+
+this is for error resolving only. 
