@@ -5,10 +5,14 @@
  */
 package com.cibt.crm.web.service;
 
+import com.cibt.crm.web.entity.Conversation;
+
 /**
  *
  * @author dale
  */
-public interface ConversationService {
+public interface ConversationService extends GenericService<Conversation> {
     
+
+
 }
