@@ -1,0 +1,1 @@
+create table tbl_conversation (id serial primary key, message_date timestamp default CURRENT_TIMESTAMP, customer_id int not null, message varchar(255) not null, conversation_type_id int not null, customer_id int not null);
