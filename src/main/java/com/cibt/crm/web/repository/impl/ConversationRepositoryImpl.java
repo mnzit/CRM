@@ -29,7 +29,7 @@ public class ConversationRepositoryImpl implements ConversationRepository {
         String sql = "insert into tbl_conversations (email,password,status) values(?,?,?)";
 
         template.update(sql, new Object[]{
-            model.getEmail(), model.getPassword(), model.isStatus()
+            //model.getEmail(), model.getPassword(), model.isStatus()
         });
 
     }
