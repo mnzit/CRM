@@ -19,6 +19,7 @@ import java.util.List;
 public class JdbcTemplate<T> {
 
     public Connection getConnection() throws Exception {
+        Class.forName("com.mysql.cj.jdbc.Driver");
         return DriverManager.getConnection(DbConstants.URL, DbConstants.USERNAME, DbConstants.PASSWORD);
     }
 

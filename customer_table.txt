@@ -1,0 +1,1 @@
+create table tbl_customer(customer_id serial primary key,name varchar(100) not null, email varchar(50) not null, contact_no varchar(50) not null,date_created timestamp default CURRENT_TIMESTAMP,date_modified timestamp null, is_deleted boolean default false, deleted_date timestamp null,deleted_by int(11) null, status boolean default true);
