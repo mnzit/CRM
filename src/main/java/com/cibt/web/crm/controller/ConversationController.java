@@ -5,10 +5,14 @@
  */
 package com.cibt.web.crm.controller;
 
+import com.cibt.crm.web.repository.impl.ConversationRepositoryImpl;
+import com.cibt.crm.web.service.ConversationService;
+import com.cibt.crm.web.service.impl.ConversationServiceImpl;
+
 /**
  *
  * @author dale
  */
 public class ConversationController extends Controller{
-    
+    private ConversationService conversationService = new ConversationServiceImpl(new ConversationRepositoryImpl());
 }
