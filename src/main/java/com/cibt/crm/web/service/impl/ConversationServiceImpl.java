@@ -14,13 +14,14 @@ import java.util.List;
  *
  * @author dale
  */
-public class ConversationServiceImpl implements  ConversationService{
-    
-     private ConversationRepository conversationRepository;
+public class ConversationServiceImpl implements ConversationService {
+
+    private ConversationRepository conversationRepository;
 
     public ConversationServiceImpl(ConversationRepository conversationRepository) {
         this.conversationRepository = conversationRepository;
     }
+
     @Override
     public void save(Conversation model) throws Exception {
         conversationRepository.insert(model);
@@ -40,5 +41,10 @@ public class ConversationServiceImpl implements  ConversationService{
     public List<Conversation> fetchAll() throws Exception {
         return conversationRepository.getAll();
     }
-    
+
+    @Override
+    public List<Conversation> fetchMultipleById(int id) throws Exception {
+        return conversationRepository.getMultipleById(id);
+    }
+
 }

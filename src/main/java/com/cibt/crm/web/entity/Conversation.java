@@ -12,11 +12,12 @@ import java.util.Date;
  * @author dale
  */
 public class Conversation {
+
     private int id;
     private Date messageDate;
     private Customer customerId;
     private String message;
-    private int conversationTypeId;
+    private MessageType messageType;
 
     public Conversation() {
     }
@@ -53,14 +54,12 @@ public class Conversation {
         this.message = message;
     }
 
-    public int getConversationTypeId() {
-        return conversationTypeId;
+    public MessageType getMessageType() {
+        return messageType;
     }
 
-    public void setConversationTypeId(int conversationTypeId) {
-        this.conversationTypeId = conversationTypeId;
+    public void setMessageType(MessageType messageType) {
+        this.messageType = messageType;
     }
 
-    
-    
 }

@@ -10,6 +10,7 @@ import com.cibt.crm.web.core.RowMapper;
 import com.cibt.crm.web.entity.Customer;
 import com.cibt.crm.web.repository.CustomerRepository;
 import java.sql.ResultSet;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -50,7 +51,7 @@ public class CustomerRepositoryImpl implements CustomerRepository {
 
     @Override
     public void delete(int id) throws Exception {
-       String sql = "UPDATE tbl_customer SET deleted" ;
+        String sql = "UPDATE tbl_customer SET deleted";
     }
 
     @Override
@@ -71,7 +72,16 @@ public class CustomerRepositoryImpl implements CustomerRepository {
         customer.setEmail(rs.getString("email"));
         customer.setContactNo(rs.getString("contact_no"));
         customer.setStatus(rs.getBoolean("status"));
+        customer.setDateCreated(new Date(rs.getDate("date_created").getTime()));
+        if (rs.getDate("date_modified") != null) {
+            customer.setDateCreated(new Date(rs.getDate("date_modified").getTime()));
+        }
         return customer;
+    }
+
+    @Override
+    public List<Customer> getMultipleById(int id) throws Exception {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }

@@ -20,6 +20,8 @@ public interface CrudRepository<T> {
 
     T getById(int id) throws Exception;
 
+    List<T> getMultipleById(int id) throws Exception;
+
     void delete(int id) throws Exception;
 
     List<T> getAll() throws Exception;

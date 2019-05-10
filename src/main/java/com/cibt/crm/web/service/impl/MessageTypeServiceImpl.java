@@ -5,25 +5,25 @@
  */
 package com.cibt.crm.web.service.impl;
 
-import com.cibt.crm.web.entity.Customer;
-import com.cibt.crm.web.repository.CustomerRepository;
-import com.cibt.crm.web.service.CustomerService;
+import com.cibt.crm.web.entity.MessageType;
+import com.cibt.crm.web.repository.MessageTypeRepository;
+import com.cibt.crm.web.service.MessageTypeService;
 import java.util.List;
 
 /**
  *
  * @author Mnzit
  */
-public class CustomerServiceImpl implements CustomerService {
+public class MessageTypeServiceImpl implements MessageTypeService {
 
-    private CustomerRepository customerRepository = null;
+    private MessageTypeRepository messageTypeRepository = null;
 
-    public CustomerServiceImpl(CustomerRepository customerRepository) {
-        this.customerRepository = customerRepository;
+    public MessageTypeServiceImpl(MessageTypeRepository messageTypeRepository) {
+        this.messageTypeRepository = messageTypeRepository;
     }
 
     @Override
-    public void save(Customer model) throws Exception {
+    public void save(MessageType model) throws Exception {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -33,17 +33,17 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public Customer fetchById(int id) throws Exception {
-       return customerRepository.getById(id);
+    public MessageType fetchById(int id) throws Exception {
+        return messageTypeRepository.getById(id);
     }
 
     @Override
-    public List<Customer> fetchAll() throws Exception {
-        return customerRepository.getAll();
+    public List<MessageType> fetchAll() throws Exception {
+        return messageTypeRepository.getAll();
     }
 
     @Override
-    public List<Customer> fetchMultipleById(int id) throws Exception {
+    public List<MessageType> fetchMultipleById(int id) throws Exception {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

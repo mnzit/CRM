@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
  */
 public abstract class Controller extends HttpServlet {
 
-    protected String viewPrefix = "WEB-INF/views/";
+    protected String viewPrefix = "/WEB-INF/views/";
     protected String viewSuffix = ".jsp";
 
     protected void view(String page, HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {

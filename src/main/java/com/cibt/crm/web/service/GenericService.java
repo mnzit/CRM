@@ -20,4 +20,6 @@ public interface GenericService<T> {
     T fetchById(int id) throws Exception;
 
     List<T> fetchAll() throws Exception;
+    
+    List<T> fetchMultipleById(int id) throws Exception;
 }
